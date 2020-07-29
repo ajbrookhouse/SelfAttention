@@ -7,4 +7,8 @@ Layers.py contains the code and neccisary imports for my implementations of a Se
 
 The SelfAttention and AddSinusoidalPositionalEncodings are Keras Layers, so they can be easily imported into Keras machine learning models. 
 
-Currently, the self attention requires all inputs to have the same sequence length. I will work on generalizing this soon so the model can process batches that have different sequence lengths even within the same batch
+Currently, the self attention requires all inputs to have the same sequence length. I will work on generalizing this soon so the model can process batches that have different sequence lengths even within the same batch. Also, I am using BatchNormalization at the end of the layer. I want to change this to LayerNormalization.
+
+I am working on a Multiheaded attention class as well. I will upload it when it is finished.
+
+For more information on the details on how self attention works, I reccomend this great article (https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a). It has great illustrations and explains the concept very well.
