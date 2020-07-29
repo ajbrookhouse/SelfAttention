@@ -1,5 +1,7 @@
 # SelfAttention
-This repository houses my implementation of a Self-Attention layer in Keras to be used for multivariate time series machine learning problems
+This repository houses my implementation of a Self-Attention layer in Keras to be used for multivariate time series machine learning problems. While it is commonly used for language processing and image processing, I think Self-Attention has great potential to being used in multivariate time-series classification problems. Since inputs can be processed in paralell, a self attention model can be quicker than a LSTM model, and also benifit further from paralellization. The implementations in this repository were developed during my time working at Washington State's Smart Environments summer research program. As the project continues to develop, I will upload improvements to the Layers and upload graphics analyzing their performance.
+
+
 
 This repository has two files, Demonstration.py and Layers.py. 
 
