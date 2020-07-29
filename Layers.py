@@ -105,6 +105,7 @@ class AddSinusoidalPositionalEncodings(Layer):
     My implementation of a positional encoding to be used for an attention layer.
 
     This class is of type keras.engine.topology.Layer, so it can be added into any keras model easily. You can read more about positional encodings here ().
+    This layer caches input embeddings in RAM, so if the same shape input is given it does not need to recalculate
 
     Returns:
     Tensor: will be same shape as the input tensor, positional encodings will be added to the input vector
@@ -164,6 +165,7 @@ class MultiHeadAttention(Layer):
     Parameters:
     kqLen (int): length of the key and query vectors generated from input
     valLen (int): length of the value vectors generated from the input
+    numHeads (int): number of attention heads for the layer to use
     return_sequence (bool): whether to return all timesteps or just the last one, note time steps are not masked so if return_sequence is True, earlier time steps will contain information about future time steps
     dropout (float): value between 0 and 1 to use for dropout in the layer. Dropout is applied to the key, query, and value matricies and also the output of the layer
     bias (bool): whether or not to train an additive bias for the key, query, and value matricies
