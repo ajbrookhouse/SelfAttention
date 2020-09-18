@@ -12,3 +12,5 @@ The SelfAttention and AddSinusoidalPositionalEncodings are Keras Layers, so they
 Currently, the self attention requires all inputs to have the same sequence length. I will work on generalizing this soon so the model can process batches that have different sequence lengths even within the same batch. Also, I am using BatchNormalization at the end of the layer. I want to change this to LayerNormalization eventually, but am not sure how to do it yet without directly importing tensorflow functions. I am trying to keep these layers just in terms of Keras api so that they are backend agnostic.
 
 For more information on the details on how self attention works, I reccomend this great article (https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a). It has great illustrations and explains the concept very well.
+
+The github repo for this code can be found at https://github.com/ajbrookhouse/SelfAttention
